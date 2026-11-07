@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: xray-node
+    env: python
+    buildCommand: echo "no build"
+    startCommand: python3 run.py
+    envVars:
+      - key: UUID
+        sync: false
+      - key: WS_PATH
+        value: /vless
